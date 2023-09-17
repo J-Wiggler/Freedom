@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://grf7q8nbm2th"
-path="res://.godot/imported/floor.png-fc3469f9a8e5a10d9e5eda0a2d04c8f7.ctex"
+uid="uid://cv11dkp101a05"
+path="res://.godot/imported/dialogue_box.png-183d9e30f0aac0d92aaafd41252357b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://F/floor.png"
-dest_files=["res://.godot/imported/floor.png-fc3469f9a8e5a10d9e5eda0a2d04c8f7.ctex"]
+source_file="res://Sprites/dialogue_box.png"
+dest_files=["res://.godot/imported/dialogue_box.png-183d9e30f0aac0d92aaafd41252357b4.ctex"]
 
 [params]
 

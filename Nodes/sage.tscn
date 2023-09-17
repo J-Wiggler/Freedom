@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://r7prjsbigddk"]
 
 [ext_resource type="Script" path="res://Movement.gd" id="1_d2n2x"]
-[ext_resource type="Texture2D" uid="uid://c0koydv24q1f" path="res://F/mira_front.png" id="1_umr7d"]
+[ext_resource type="Texture2D" uid="uid://oypo4rk5pkrf" path="res://Sprites/sage.png" id="2_u5bn0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f1ur"]
 size = Vector2(12, 8)
@@ -14,5 +14,5 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_1f1ur")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_umr7d")
+texture = ExtResource("2_u5bn0")
 offset = Vector2(0, -32)

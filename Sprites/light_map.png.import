@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv11dkp101a05"
-path="res://.godot/imported/dialogue_box.png-fae91e07d9844911c69038cef4c053d1.ctex"
+uid="uid://15eead65ibpf"
+path="res://.godot/imported/light_map.png-31f2f31e936333910382254a8fc78ee4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://F/dialogue_box.png"
-dest_files=["res://.godot/imported/dialogue_box.png-fae91e07d9844911c69038cef4c053d1.ctex"]
+source_file="res://Sprites/light_map.png"
+dest_files=["res://.godot/imported/light_map.png-31f2f31e936333910382254a8fc78ee4.ctex"]
 
 [params]
 

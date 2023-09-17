@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://dkyfeodjh4208"]
 
-[ext_resource type="Texture2D" uid="uid://pg1b4213iwrs" path="res://F/white.png" id="1_daamg"]
 [ext_resource type="Script" path="res://Nodes/MainMenu.gd" id="1_saahg"]
 [ext_resource type="TileSet" uid="uid://xgmw8mwgn5tb" path="res://Nodes/tileset.tres" id="2_dktdb"]
+[ext_resource type="Texture2D" uid="uid://pg1b4213iwrs" path="res://Sprites/white.png" id="2_dms1x"]
 
 [sub_resource type="SystemFont" id="SystemFont_4262v"]
 font_names = PackedStringArray("FreeSerif")
@@ -35,7 +35,7 @@ script = ExtResource("1_saahg")
 modulate = Color(0, 0, 0, 0.768627)
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_daamg")
+texture = ExtResource("2_dms1x")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 672.0
