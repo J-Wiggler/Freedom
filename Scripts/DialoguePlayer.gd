@@ -9,7 +9,6 @@ func _input(event):
 		emit_signal("proceed")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	initialize("res://test.json")
 	pass # Replace with function body.
 
 

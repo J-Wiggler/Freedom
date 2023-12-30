@@ -1,0 +1,24 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://1egnbus31d0n"]
+
+[ext_resource type="Texture2D" uid="uid://grf7q8nbm2th" path="res://Sprites/floor.png" id="1_dndq6"]
+[ext_resource type="Texture2D" uid="uid://pg1b4213iwrs" path="res://Sprites/white.png" id="2_pldvg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6sgu"]
+texture = ExtResource("1_dndq6")
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ne10s"]
+texture = ExtResource("2_pldvg")
+0:0/0 = 0
+0:0/0/modulate = Color(1, 0, 0, 1)
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_p6sgu")
+sources/1 = SubResource("TileSetAtlasSource_ne10s")

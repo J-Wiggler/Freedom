@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oypo4rk5pkrf"
-path="res://.godot/imported/sage.png-0a22789fa6442e2e357b14dca0539dd1.ctex"
+uid="uid://bgqjdo8ntna2j"
+path="res://.godot/imported/sage_side_walk_0.png-fb89007046d6a065af984a10502c1838.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/sage.png"
-dest_files=["res://.godot/imported/sage.png-0a22789fa6442e2e357b14dca0539dd1.ctex"]
+source_file="res://Sprites/sage_side_walk_0.png"
+dest_files=["res://.godot/imported/sage_side_walk_0.png-fb89007046d6a065af984a10502c1838.ctex"]
 
 [params]
 

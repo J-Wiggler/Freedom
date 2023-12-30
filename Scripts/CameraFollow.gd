@@ -8,5 +8,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):
-	self.position = target.position
+	self.position = target.position - Vector2(0, 24)
 	pass
