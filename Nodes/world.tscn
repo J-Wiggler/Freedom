@@ -1,20 +1,20 @@
 [gd_scene load_steps=29 format=3 uid="uid://n42mnqyrcbub"]
 
 [ext_resource type="Script" path="res://Scripts/DialoguePlayer.gd" id="1_y3js2"]
-[ext_resource type="Texture2D" uid="uid://cv11dkp101a05" path="res://Sprites/dialogue_box.png" id="2_f5spa"]
+[ext_resource type="Texture2D" uid="uid://cv11dkp101a05" path="res://Sprites/UI/dialogue_box.png" id="2_f5spa"]
 [ext_resource type="PackedScene" uid="uid://r7prjsbigddk" path="res://Nodes/sage.tscn" id="2_x4rme"]
 [ext_resource type="Script" path="res://Scripts/PlayerUI.gd" id="3_lxwlg"]
 [ext_resource type="Script" path="res://Nodes/InventoryController.gd" id="4_34xc0"]
-[ext_resource type="Texture2D" uid="uid://k355ty6gy8y7" path="res://Sprites/player_hp.png" id="4_i60ax"]
+[ext_resource type="Texture2D" uid="uid://k355ty6gy8y7" path="res://Sprites/UI/player_hp.png" id="4_i60ax"]
 [ext_resource type="Script" path="res://Scripts/CameraFollow.gd" id="4_iivua"]
-[ext_resource type="Texture2D" uid="uid://pg1b4213iwrs" path="res://Sprites/white.png" id="4_m78rk"]
-[ext_resource type="Texture2D" uid="uid://dcucnbgnv5i3p" path="res://Sprites/player_stamina.png" id="5_l7c1x"]
-[ext_resource type="Texture2D" uid="uid://6i2ma1i6uepw" path="res://Sprites/alert_status_2.png" id="6_kchff"]
+[ext_resource type="Texture2D" uid="uid://pg1b4213iwrs" path="res://Sprites/UI/white.png" id="4_m78rk"]
+[ext_resource type="Texture2D" uid="uid://dcucnbgnv5i3p" path="res://Sprites/UI/player_stamina.png" id="5_l7c1x"]
+[ext_resource type="Texture2D" uid="uid://6i2ma1i6uepw" path="res://Sprites/UI/alert_status_2.png" id="6_kchff"]
 [ext_resource type="PackedScene" uid="uid://c4u8elxt7xk8m" path="res://Maps/cells.tscn" id="6_uv1qv"]
-[ext_resource type="Texture2D" uid="uid://bf2iw5xwtanwa" path="res://Sprites/alert_arrow_2.png" id="8_p4tij"]
-[ext_resource type="Texture2D" uid="uid://gpd5app0xvxs" path="res://Sprites/inventory_slot_0.png" id="10_53csr"]
-[ext_resource type="Texture2D" uid="uid://dam1u8jgfgiwl" path="res://Sprites/inventory_slot.png" id="10_hicjf"]
-[ext_resource type="Texture2D" uid="uid://nut5undfd0gy" path="res://Sprites/sage_back_idle.png" id="13_n2jb8"]
+[ext_resource type="Texture2D" uid="uid://bf2iw5xwtanwa" path="res://Sprites/UI/alert_arrow_2.png" id="8_p4tij"]
+[ext_resource type="Texture2D" uid="uid://gpd5app0xvxs" path="res://Sprites/UI/inventory_slot_0.png" id="10_53csr"]
+[ext_resource type="Texture2D" uid="uid://dam1u8jgfgiwl" path="res://Sprites/UI/inventory_slot.png" id="10_hicjf"]
+[ext_resource type="AudioStream" uid="uid://cob36rmll4g34" path="res://Sounds-Music/inventory.wav" id="12_twvdd"]
 
 [sub_resource type="SystemFont" id="SystemFont_6xjib"]
 font_names = PackedStringArray("FreeSerif")
@@ -355,6 +355,7 @@ _data = {
 }
 
 [node name="World" type="Node2D"]
+y_sort_enabled = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.494118, 0.494118, 0.494118, 1)
@@ -593,6 +594,9 @@ libraries = {
 "": SubResource("AnimationLibrary_cubql")
 }
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CanvasLayer/PlayerUI"]
+stream = ExtResource("12_twvdd")
+
 [node name="Transition" type="TextureRect" parent="CanvasLayer"]
 modulate = Color(0, 0, 0, 0)
 offset_right = 1920.0
@@ -613,13 +617,11 @@ script = ExtResource("4_iivua")
 target = NodePath("../Sage")
 
 [node name="Sage" parent="." instance=ExtResource("2_x4rme")]
-y_sort_enabled = true
-
-[node name="Sprite2D" parent="Sage" index="1"]
-position = Vector2(0, 0)
-texture = ExtResource("13_n2jb8")
 
 [node name="Cells" parent="." instance=ExtResource("6_uv1qv")]
+
+[node name="Sprite2D" parent="Cells/Objects" index="0"]
+position = Vector2(2, -2)
 
 [node name="Inventory" type="Node2D" parent="."]
 

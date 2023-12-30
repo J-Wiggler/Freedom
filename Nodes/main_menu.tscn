@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_752kk"]
 [ext_resource type="TileSet" uid="uid://xgmw8mwgn5tb" path="res://Nodes/tileset.tres" id="2_dktdb"]
-[ext_resource type="Texture2D" uid="uid://pg1b4213iwrs" path="res://Sprites/white.png" id="2_dms1x"]
-[ext_resource type="Texture2D" uid="uid://cy1vaqbb1mohr" path="res://Sprites/title.png" id="3_j1wlr"]
-[ext_resource type="Texture2D" uid="uid://bqf601t8hqbgk" path="res://Sprites/new_game.png" id="4_hqww8"]
-[ext_resource type="AudioStream" uid="uid://dh2scdm4pat0i" path="res://cgorl1.mp3" id="4_v6dho"]
-[ext_resource type="Texture2D" uid="uid://bhpdc5c2eqe6e" path="res://Sprites/quit.png" id="5_jhie8"]
+[ext_resource type="Texture2D" uid="uid://pg1b4213iwrs" path="res://Sprites/UI/white.png" id="2_dms1x"]
+[ext_resource type="Texture2D" uid="uid://cy1vaqbb1mohr" path="res://Sprites/UI/title.png" id="3_j1wlr"]
+[ext_resource type="Texture2D" uid="uid://bqf601t8hqbgk" path="res://Sprites/UI/new_game.png" id="4_hqww8"]
+[ext_resource type="AudioStream" uid="uid://dh2scdm4pat0i" path="res://Sounds-Music/cgorl1.mp3" id="4_v6dho"]
+[ext_resource type="Texture2D" uid="uid://bhpdc5c2eqe6e" path="res://Sprites/UI/quit.png" id="5_jhie8"]
 
 [sub_resource type="SystemFont" id="SystemFont_prf55"]
 font_names = PackedStringArray("FreeSerif")
@@ -246,7 +246,11 @@ libraries = {
 
 [connection signal="focus_entered" from="CanvasLayer/StartButton" to="." method="_on_start_button_focus_entered"]
 [connection signal="focus_exited" from="CanvasLayer/StartButton" to="." method="_on_start_button_focus_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/StartButton" to="." method="_on_start_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/StartButton" to="." method="_on_start_button_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="focus_entered" from="CanvasLayer/QuitButton" to="." method="_on_quit_button_focus_entered"]
 [connection signal="focus_exited" from="CanvasLayer/QuitButton" to="." method="_on_quit_button_focus_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/QuitButton" to="." method="_on_quit_button_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/QuitButton" to="." method="_on_quit_button_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/QuitButton" to="." method="_on_quit_button_pressed"]

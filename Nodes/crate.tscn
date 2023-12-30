@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://6gfjcnohamcb"]
+
+[ext_resource type="Texture2D" uid="uid://c6igh0a4xusxg" path="res://Sprites/Tiles/crate.png" id="1_6hqgk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5f3qe"]
+size = Vector2(32, 26)
+
+[node name="Crate" type="Sprite2D"]
+z_as_relative = false
+y_sort_enabled = true
+texture = ExtResource("1_6hqgk")
+offset = Vector2(0, -20)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_5f3qe")
